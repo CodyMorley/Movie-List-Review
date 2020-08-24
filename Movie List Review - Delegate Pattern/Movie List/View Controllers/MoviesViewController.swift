@@ -21,14 +21,23 @@ class MoviesViewController: UIViewController {
         moviesTable.dataSource = self
     }
     
-
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-       
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        moviesTable.reloadData()
     }
     
 
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "AddMovie":
+            guard let AddVC = segue.destination as? AddMovieViewController else { return }
+            AddVC.delegate = self
+        default:
+            NSLog("Unknown Segue")
+            break
+        }
+    }
 }
 
 
@@ -43,7 +52,22 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = moviesTable.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieTableViewCell else { return UITableViewCell()}
+        
         cell.movie = movieController.movies[indexPath.row]
+        cell.delegate = self
         return cell
+    }
+}
+
+extension MoviesViewController: MovieDelegate {
+    func updateMovie(_ movie: Movie) {
+        guard let movieIndex = movieController.movies.firstIndex(of: movie) else { return }
+        movieController.movies[movieIndex].seen.toggle()
+        moviesTable.reloadData()
+    }
+    
+    func addMovie(_ title: String) {
+        movieController.createMovie(title)
+        moviesTable.reloadData()
     }
 }

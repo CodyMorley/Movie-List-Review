@@ -1,5 +1,5 @@
 //
-//  Movie.swift
+//  MovieDelegate.swift
 //  Movie List
 //
 //  Created by Cody Morley on 8/24/20.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Movie: Equatable {
-    var title: String
-    var seen: Bool
+protocol MovieDelegate {
+    func addMovie(_ title: String)
+    
+    func updateMovie(_ movie: Movie)
 }

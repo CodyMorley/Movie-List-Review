@@ -12,6 +12,7 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var seenButton: UIButton!
     
+    var delegate: MovieDelegate?
     var movie: Movie? {
         didSet {
             updateViews()
@@ -19,14 +20,17 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     @IBAction func seenTapped(_ sender: Any) {
-        guard var movie = movie else { return }
-        movie.seen.toggle()
+        guard let movie = movie,
+            let delegate = delegate else { return }
+        
+        delegate.updateMovie(movie)
         updateViews()
     }
     
     func updateViews() {
         guard let movie = movie else { return }
         titleLabel.text = movie.title
+        
         switch movie.seen {
         case true:
             seenButton.setTitle("Seen", for: .normal)
@@ -34,6 +38,4 @@ class MovieTableViewCell: UITableViewCell {
             seenButton.setTitle("Not Seen", for: .normal)
         }
     }
-    
-    
 }
