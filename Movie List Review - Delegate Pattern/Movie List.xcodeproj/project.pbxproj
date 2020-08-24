@@ -54,14 +54,70 @@
 		467E198B20F5165700E7FF73 /* Movie List */ = {
 			isa = PBXGroup;
 			children = (
-				467E198C20F5165800E7FF73 /* AppDelegate.swift */,
-				467E199320F5165900E7FF73 /* Assets.xcassets */,
-				467E199820F5165900E7FF73 /* Info.plist */,
-				467E199020F5165800E7FF73 /* Main.storyboard */,
-				8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */,
-				8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */,
+				5E315E2924F46427000A8191 /* Models */,
+				5E315E2A24F4642C000A8191 /* Controllers */,
+				5E315E2724F463C6000A8191 /* Views */,
+				5E315E2B24F46435000A8191 /* View Controllers */,
+				5E315E2224F46367000A8191 /* Resources */,
+				5E315E2824F46414000A8191 /* Application */,
 			);
 			path = "Movie List";
+			sourceTree = "<group>";
+		};
+		5E315E2224F46367000A8191 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				467E199820F5165900E7FF73 /* Info.plist */,
+				467E199320F5165900E7FF73 /* Assets.xcassets */,
+				8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5E315E2624F463B5000A8191 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				467E199020F5165800E7FF73 /* Main.storyboard */,
+				8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5E315E2724F463C6000A8191 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E315E2624F463B5000A8191 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5E315E2824F46414000A8191 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				467E198C20F5165800E7FF73 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5E315E2924F46427000A8191 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5E315E2A24F4642C000A8191 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5E315E2B24F46435000A8191 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
