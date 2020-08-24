@@ -10,6 +10,7 @@
 		467E198D20F5165800E7FF73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467E198C20F5165800E7FF73 /* AppDelegate.swift */; };
 		467E199220F5165800E7FF73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467E199020F5165800E7FF73 /* Main.storyboard */; };
 		467E199420F5165900E7FF73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467E199320F5165900E7FF73 /* Assets.xcassets */; };
+		5E315E2D24F46597000A8191 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E315E2C24F46596000A8191 /* Movie.swift */; };
 		8E5B3916218CDD4D00AB9C2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */; };
 		8E5B3917218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */; };
 /* End PBXBuildFile section */
@@ -20,6 +21,7 @@
 		467E199120F5165800E7FF73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		467E199320F5165900E7FF73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		467E199820F5165900E7FF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E315E2C24F46596000A8191 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LambdaLogoAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 		5E315E2924F46427000A8191 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5E315E2C24F46596000A8191 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E315E2D24F46597000A8191 /* Movie.swift in Sources */,
 				467E198D20F5165800E7FF73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
