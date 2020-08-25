@@ -19,8 +19,10 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     @IBAction func seenTapped(_ sender: Any) {
-        guard var movie = movie else { return }
-        movie.seen.toggle()
+        guard let movie = movie else { return }
+        NotificationCenter.default.post(name: .updateMovie,
+                                        object: nil,
+                                        userInfo: ["movie" : movie])
         updateViews()
     }
     

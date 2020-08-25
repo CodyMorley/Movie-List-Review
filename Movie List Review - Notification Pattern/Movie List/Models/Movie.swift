@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Movie {
+struct Movie: Hashable, Equatable {
     var title: String
     var seen: Bool = false
 }

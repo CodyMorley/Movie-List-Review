@@ -14,21 +14,41 @@ class MoviesViewController: UIViewController {
     
     var movieController = MovieController()
     
+    
     //MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         moviesTable.delegate = self
         moviesTable.dataSource = self
+        NotificationCenter.default.addObserver(forName: .addMovie,
+                                               object: nil,
+                                               queue: OperationQueue.main,
+                                               using: addToMovies)
+        NotificationCenter.default.addObserver(forName: .updateMovie,
+                                               object: nil,
+                                               queue: OperationQueue.main,
+                                               using: updateSeen)
     }
     
-
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-       
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        moviesTable.reloadData()
     }
     
-
+    
+    //MARK: - Methods -
+    private func addToMovies(_ notification: Notification) {
+        guard let title = notification.userInfo?["title"] as? String else { return }
+        movieController.createMovie(title)
+        moviesTable.reloadData()
+    }
+    
+    private func updateSeen(_ notification: Notification) {
+        guard let movie = notification.userInfo?["movie"] as? Movie else { return }
+        guard let movieIndex = movieController.movies.firstIndex(of: movie) else { return }
+        movieController.movies[movieIndex].seen.toggle()
+        moviesTable.reloadData()
+    }
 }
 
 

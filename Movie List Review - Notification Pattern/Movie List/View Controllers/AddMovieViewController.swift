@@ -16,7 +16,13 @@ class AddMovieViewController: UIViewController {
     }
     
     @IBAction func addMovie(_ sender: Any) {
+        guard let title = titleField.text,
+            title != "",
+            !title.isEmpty else { return }
         
+        NotificationCenter.default.post(name: .addMovie,
+                                        object: nil,
+                                        userInfo: ["title" : "\(title)"])
     }
     
 }

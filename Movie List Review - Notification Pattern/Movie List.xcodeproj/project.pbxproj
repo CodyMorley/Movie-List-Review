@@ -15,6 +15,7 @@
 		5E315E3C24F46F58000A8191 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E315E3A24F46F58000A8191 /* AddMovieViewController.swift */; };
 		5E315E3D24F46F58000A8191 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E315E3B24F46F58000A8191 /* MoviesViewController.swift */; };
 		5E315E3F24F46F62000A8191 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E315E3E24F46F62000A8191 /* MovieTableViewCell.swift */; };
+		5E315E4324F4ACD7000A8191 /* Notification.Name+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E315E4224F4ACD6000A8191 /* Notification.Name+Notifications.swift */; };
 		8E5B3916218CDD4D00AB9C2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */; };
 		8E5B3917218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		5E315E3A24F46F58000A8191 /* AddMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		5E315E3B24F46F58000A8191 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		5E315E3E24F46F62000A8191 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		5E315E4224F4ACD6000A8191 /* Notification.Name+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Notifications.swift"; sourceTree = "<group>"; };
 		8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LambdaLogoAssets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				5E315E2E24F465F7000A8191 /* Movie.swift */,
+				5E315E4224F4ACD6000A8191 /* Notification.Name+Notifications.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -129,8 +132,8 @@
 		5E315E2B24F46435000A8191 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5E315E3A24F46F58000A8191 /* AddMovieViewController.swift */,
 				5E315E3B24F46F58000A8191 /* MoviesViewController.swift */,
+				5E315E3A24F46F58000A8191 /* AddMovieViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				5E315E3924F46F46000A8191 /* MovieController.swift in Sources */,
 				5E315E3D24F46F58000A8191 /* MoviesViewController.swift in Sources */,
 				5E315E3F24F46F62000A8191 /* MovieTableViewCell.swift in Sources */,
+				5E315E4324F4ACD7000A8191 /* Notification.Name+Notifications.swift in Sources */,
 				5E315E2F24F465F7000A8191 /* Movie.swift in Sources */,
 				467E198D20F5165800E7FF73 /* AppDelegate.swift in Sources */,
 				5E315E3C24F46F58000A8191 /* AddMovieViewController.swift in Sources */,
